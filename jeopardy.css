@@ -1,0 +1,30 @@
+body{
+    background-color: blue;
+    color: white;
+}
+td{
+    padding: 10px;
+    border-radius: 5px;
+}
+th{
+    background-color: dodgerblue;
+    border-radius: 5px;
+}
+table{
+    width: 100%;
+    text-align: center;
+    color: yellow;
+    font-family: 'Anton', sans-serif;
+}
+td:hover{
+    background-color: dodgerblue;
+    box-shadow: 3px 3px 3px black;
+}
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+/*
+a:visited{
+    color: aliceblue;
+}*/
