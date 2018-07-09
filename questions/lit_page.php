@@ -33,7 +33,9 @@
                     "answer" => "Who is Chester Gould?",
                 ),
             );
-            echo "<p style='text-align: center; font-size: 300%;'>" . $qna_array[rand(0, 4)]["question"] . "</p>";
+            $picked = $qna_array[rand(0, 4)];
+            echo "<p style='text-align: center; font-size: 300%;'>" . $picked["question"] . "</p>";
+            echo "<p style = 'color: cornflowerblue; text-align: center; font-size: 300%;'>", $picked["answer"], "</p>"
         ?>
         <div style="display: block; margin: auto;">
             <form action="script.php" method="get">

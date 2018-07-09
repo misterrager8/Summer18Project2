@@ -4,6 +4,7 @@
     $_SESSION["team2_score"] = 0;
     $_SESSION["team3_score"] = 0;
     $_SESSION["team4_score"] = 0;
+    $_SESSION["num_teams"] = 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,6 +76,6 @@
             </tr>
         </table>
         <br>
-        <a href="leaderboard.php">Leaderboard</a>
+        <a href="leaderboard.php">Click To See Leaderboard</a>
     </body>
 </html>
