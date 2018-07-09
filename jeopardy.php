@@ -1,7 +1,9 @@
 <?php
     session_start();
-    $_SESSION["numCat"] = 0;
-    $_SESSION["perCat"] = 0;
+    $_SESSION["team1_score"] = 0;
+    $_SESSION["team2_score"] = 0;
+    $_SESSION["team3_score"] = 0;
+    $_SESSION["team4_score"] = 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,44 +15,66 @@
     </head>
     <body>
         <form action="" method="post">
-            Number Of Categories:
-            <select name="numCat">
+            Number Of Teams:
+            <select name="numTeams">
                 <option value = "1">1</option>
                 <option value = "2">2</option>
                 <option value = "3">3</option>
                 <option value = "4">4</option>
-                <option value = "5">5</option>
-                <option value = "6">6</option>
-            </select>
-            Questions Per Category:
-            <select name="perCat">
-                <option value = "1">1</option>
-                <option value = "2">2</option>
-                <option value = "3">3</option>
-                <option value = "4">4</option>
-                <option value = "5">5</option>
             </select>
             <input type = "submit" name = "button">
-            <a href="#" style="float:right; color:orange;">Leaderboard</a>
         </form>
-        <?php
-            function make_table($perCat, $numCat) {
-                $categories = array("Movies", "TV", "Literature", "Music", "Politics", "Web");
-                echo "<table><tr>";
-                for($x = 0; $x < $numCat; $x++){
-                    echo "<th>" . $categories[$x] . "</th>";
-                }
-                echo "</tr>";
-                for ($i = 1; $i <= $perCat; $i++){
-                    echo "<tr>";
-                    for ($j = 1; $j <= $numCat; $j++){
-                        echo "<td><a href = 'quest_page.php'>$", $i * 200, "</a></td>";
-                    }
-                    echo "</tr>";
-                }
-                echo "</table>";
-            }
-            make_table($_POST["perCat"], $_POST["numCat"]);
-        ?>
+        <table>
+            <tr>
+                <th>Movies</th>
+                <th>TV</th>
+                <th>Literature</th>
+                <th>Music</th>
+                <th>Politics</th>
+                <th>Tech</th>
+            </tr>
+            <tr>
+                <td><a href = "questions/movies_page.php">200</a></td>
+                <td><a href = "questions/tv_page.php">200</a></td>
+                <td><a href = "questions/lit_page.php">200</a></td>
+                <td><a href = "questions/music_page.php">200</a></td>
+                <td><a href = "questions/polit_page.php">200</a></td>
+                <td><a href = "questions/tech_page.php">200</a></td>
+            </tr>
+            <tr>
+                <td><a href = "questions/movies_page.php">400</a></td>
+                <td><a href = "questions/tv_page.php">400</a></td>
+                <td><a href = "questions/lit_page.php">400</a></td>
+                <td><a href = "questions/music_page.php">400</a></td>
+                <td><a href = "questions/polit_page.php">400</a></td>
+                <td><a href = "questions/tech_page.php">400</a></td>
+            </tr>
+            <tr>
+                <td><a href = "questions/movies_page.php">600</a></td>
+                <td><a href = "questions/tv_page.php">600</a></td>
+                <td><a href = "questions/lit_page.php">600</a></td>
+                <td><a href = "questions/music_page.php">600</a></td>
+                <td><a href = "questions/polit_page.php">600</a></td>
+                <td><a href = "questions/tech_page.php">600</a></td>
+            </tr>
+            <tr>
+                <td><a href = "questions/movies_page.php">800</a></td>
+                <td><a href = "questions/tv_page.php">800</a></td>
+                <td><a href = "questions/lit_page.php">800</a></td>
+                <td><a href = "questions/music_page.php">800</a></td>
+                <td><a href = "questions/polit_page.php">800</a></td>
+                <td><a href = "questions/tech_page.php">800</a></td>
+            </tr>
+            <tr>
+                <td><a href = "questions/movies_page.php">1000</a></td>
+                <td><a href = "questions/tv_page.php">1000</a></td>
+                <td><a href = "questions/lit_page.php">1000</a></td>
+                <td><a href = "questions/music_page.php">1000</a></td>
+                <td><a href = "questions/polit_page.php">1000</a></td>
+                <td><a href = "questions/tech_page.php">1000</a></td>
+            </tr>
+        </table>
+        <br>
+        <a href="leaderboard.php">Leaderboard</a>
     </body>
 </html>
